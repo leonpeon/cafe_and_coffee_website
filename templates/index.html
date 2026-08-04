@@ -68,17 +68,20 @@
 				</section>
 
 			<div class="cafe-container">
-				{% for i in range(20) %}
+				{% for cafe in cafes %}
 					<div class="card">
 						<div class="card-inner">
 							<div class="card-front">
-								<img src="{{ url_for('static', filename='images/pic01.jpg') }}">
-								<h2>Cafe Name</h2>
+								<img src="{{ cafe.img_url }}">
+								<h3>{{ cafe.name }}</h3>
 							</div>
 
 							<div class="card-back">
-								<p>📶 Wifi rating</p>
-								<p>🔌 Socket rating</p>
+								<p>📶 Wifi: {{ cafe.has_wifi }}</p>
+								<p>🔌 Socket: {{ cafe.has_socket }}</p>
+								<p>🚽 Toilet: {{ cafe.has_toilet }}</p>
+								<p>🪑 Seats: {{ cafe.seats }}</p>
+								<p>☕ Price: {{ cafe.coffee_price }}</p>
 							</div>
 						</div>
 					</div>
