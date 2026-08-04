@@ -59,9 +59,9 @@
 							</div>
 
 							<div class="card-back">
-								<p>📶 Wifi: {{ cafe.has_wifi }}</p>
-								<p>🔌 Sockets: {{ cafe.has_sockets }}</p>
-								<p>🚽 Toilet: {{ cafe.has_toilet }}</p>
+								<p>📶 Wifi: {{ "Yes" if cafe.has_wifi else "No" }}</p>
+								<p>🔌 Sockets: {{ "Yes" if cafe.has_sockets else "No" }}</p>
+								<p>🚽 Toilet: {{ "Yes" if cafe.has_toilet else "No" }}</p>
 								<p>🪑 Seats: {{ cafe.seats }}</p>
 								<p>☕ Price: {{ cafe.coffee_price }}</p>
 							</div>

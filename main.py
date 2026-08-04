@@ -25,6 +25,7 @@ class Cafe(db.Model):
 @app.route("/")
 def home():
     cafes = db.session.execute(db.select(Cafe).order_by(Cafe.id)).scalars().all()
+    
     return render_template("index.html", cafes=cafes)
 
 if __name__ == "__main__":
